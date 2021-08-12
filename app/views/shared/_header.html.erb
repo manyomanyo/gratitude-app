@@ -1,0 +1,7 @@
+<% if user_signed_in? %>
+<li><%= link_to 'サインアウト', destroy_admin_session_path, method: :delete %></li>
+<% else %>
+<li><%= link_to 'サインアップ', new_admin_registration_path %></li>
+
+<li><%= link_to 'サインイン', new_admin_session_path %></li>
+<% end %>

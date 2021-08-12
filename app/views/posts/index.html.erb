@@ -1,0 +1,15 @@
+<p>ログイントップページ<p>
+
+<li><%= link_to '管理者の方はこちら', admins_path %></li>
+
+<% if admin_signed_in? %>
+  <% if current_admin == @admin || current_admin %>
+    <%= link_to "管理者トップページへ", '#' %>
+  <% end %>
+<% end %>
+
+<li><%= link_to 'ユーザーの方はこちら', users_path %></li>
+
+
+
+
